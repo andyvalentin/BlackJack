@@ -26,11 +26,11 @@ namespace BlackJack
             this.FullDeck.Add(new Card { NumValue = 3, Suit = "Spades", Face = "3" });
             this.FullDeck.Add(new Card { NumValue = 4, Suit = "Spades", Face = "4" });
             this.FullDeck.Add(new Card { NumValue = 5, Suit = "Spades", Face = "5" });
-            this.FullDeck.Add(new Card { NumValue = 5, Suit = "Spades", Face = "6" });
-            this.FullDeck.Add(new Card { NumValue = 6, Suit = "Spades", Face = "7" });
-            this.FullDeck.Add(new Card { NumValue = 7, Suit = "Spades", Face = "8" });
+            this.FullDeck.Add(new Card { NumValue = 6, Suit = "Spades", Face = "6" });
+            this.FullDeck.Add(new Card { NumValue = 7, Suit = "Spades", Face = "7" });
             this.FullDeck.Add(new Card { NumValue = 8, Suit = "Spades", Face = "8" });
             this.FullDeck.Add(new Card { NumValue = 9, Suit = "Spades", Face = "9" });
+            this.FullDeck.Add(new Card { NumValue = 10, Suit = "Spades", Face = "10" });
             this.FullDeck.Add(new Card { NumValue = 10, Suit = "Spades", Face = "Jack" });
             this.FullDeck.Add(new Card { NumValue = 10, Suit = "Spades", Face = "Queen" });
             this.FullDeck.Add(new Card { NumValue = 10, Suit = "Spades", Face = "King" });
@@ -40,11 +40,11 @@ namespace BlackJack
             this.FullDeck.Add(new Card { NumValue = 3, Suit = "Diamonds", Face = "3" });
             this.FullDeck.Add(new Card { NumValue = 4, Suit = "Diamonds", Face = "4" });
             this.FullDeck.Add(new Card { NumValue = 5, Suit = "Diamonds", Face = "5" });
-            this.FullDeck.Add(new Card { NumValue = 5, Suit = "Diamonds", Face = "6" });
-            this.FullDeck.Add(new Card { NumValue = 6, Suit = "Diamonds", Face = "7" });
-            this.FullDeck.Add(new Card { NumValue = 7, Suit = "Diamonds", Face = "8" });
+            this.FullDeck.Add(new Card { NumValue = 6, Suit = "Diamonds", Face = "6" });
+            this.FullDeck.Add(new Card { NumValue = 7, Suit = "Diamonds", Face = "7" });
             this.FullDeck.Add(new Card { NumValue = 8, Suit = "Diamonds", Face = "8" });
             this.FullDeck.Add(new Card { NumValue = 9, Suit = "Diamonds", Face = "9" });
+            this.FullDeck.Add(new Card { NumValue = 10, Suit = "Diamonds", Face = "10" });
             this.FullDeck.Add(new Card { NumValue = 10, Suit = "Diamonds", Face = "Jack" });
             this.FullDeck.Add(new Card { NumValue = 10, Suit = "Diamonds", Face = "Queen" });
             this.FullDeck.Add(new Card { NumValue = 10, Suit = "Diamonds", Face = "King" });
@@ -54,11 +54,11 @@ namespace BlackJack
             this.FullDeck.Add(new Card { NumValue = 3, Suit = "Clubs", Face = "3" });
             this.FullDeck.Add(new Card { NumValue = 4, Suit = "Clubs", Face = "4" });
             this.FullDeck.Add(new Card { NumValue = 5, Suit = "Clubs", Face = "5" });
-            this.FullDeck.Add(new Card { NumValue = 5, Suit = "Clubs", Face = "6" });
-            this.FullDeck.Add(new Card { NumValue = 6, Suit = "Clubs", Face = "7" });
-            this.FullDeck.Add(new Card { NumValue = 7, Suit = "Clubs", Face = "8" });
+            this.FullDeck.Add(new Card { NumValue = 6, Suit = "Clubs", Face = "6" });
+            this.FullDeck.Add(new Card { NumValue = 7, Suit = "Clubs", Face = "7" });
             this.FullDeck.Add(new Card { NumValue = 8, Suit = "Clubs", Face = "8" });
             this.FullDeck.Add(new Card { NumValue = 9, Suit = "Clubs", Face = "9" });
+            this.FullDeck.Add(new Card { NumValue = 10, Suit = "Clubs", Face = "10" });
             this.FullDeck.Add(new Card { NumValue = 10, Suit = "Clubs", Face = "Jack" });
             this.FullDeck.Add(new Card { NumValue = 10, Suit = "Clubs", Face = "Queen" });
             this.FullDeck.Add(new Card { NumValue = 10, Suit = "Clubs", Face = "King" });
@@ -68,15 +68,14 @@ namespace BlackJack
             this.FullDeck.Add(new Card { NumValue = 3, Suit = "Hearts", Face = "3" });
             this.FullDeck.Add(new Card { NumValue = 4, Suit = "Hearts", Face = "4" });
             this.FullDeck.Add(new Card { NumValue = 5, Suit = "Hearts", Face = "5" });
-            this.FullDeck.Add(new Card { NumValue = 5, Suit = "Hearts", Face = "6" });
-            this.FullDeck.Add(new Card { NumValue = 6, Suit = "Hearts", Face = "7" });
-            this.FullDeck.Add(new Card { NumValue = 7, Suit = "Hearts", Face = "8" });
+            this.FullDeck.Add(new Card { NumValue = 6, Suit = "Hearts", Face = "6" });
+            this.FullDeck.Add(new Card { NumValue = 7, Suit = "Hearts", Face = "7" });
             this.FullDeck.Add(new Card { NumValue = 8, Suit = "Hearts", Face = "8" });
             this.FullDeck.Add(new Card { NumValue = 9, Suit = "Hearts", Face = "9" });
+            this.FullDeck.Add(new Card { NumValue = 10, Suit = "Hearts", Face = "10" });
             this.FullDeck.Add(new Card { NumValue = 10, Suit = "Hearts", Face = "Jack" });
             this.FullDeck.Add(new Card { NumValue = 10, Suit = "Hearts", Face = "Queen" });
             this.FullDeck.Add(new Card { NumValue = 10, Suit = "Hearts", Face = "King" });
-
         }
 
     }
@@ -85,6 +84,22 @@ namespace BlackJack
     {
         static void Main(string[] args)
         {
+            Random rnd = new Random();
+            Deck shuffle = new Deck();
+
+            var rndCard1 = rnd.Next(52);
+            var rndCard2 = rnd.Next(52);
+
+            var card1 = shuffle.FullDeck[rndCard1];
+            var card2 = shuffle.FullDeck[rndCard2];
+
+            Console.WriteLine("Card 1: {0}({1})", card1.Face, card1.Suit);
+            Console.WriteLine("Card 2: {0}({1})", card2.Face, card2.Suit);
+
+            Console.WriteLine("Total: " + (card1.NumValue + card2.NumValue));
+
+            Console.ReadLine();
+
         }
     }
 }
